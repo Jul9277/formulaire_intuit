@@ -4,26 +4,26 @@
   <header>
      <div class="connect">
         <p>Already have an Intuit account?</p>
-        <p><a href="/">I forgot my User ID or Password</a></p>
+        <p><%= link to "/"%>I forgot my User ID or Password</p>
       </div>
     <button><span>Sign In</span></button> 
   </header>
 
   <article>
     
-      <img src= "assets/logo_intuit_grey.png" id="intuit_top" /><br/>
+      <%= image_tag "assets/logo_intuit_grey.png" id="intuit_top" %><br/>
 
     <div id="formulaire">
       <div class="logos">
-        <img src= "assets/logo_turbotax.png" id="turbotax"/>
-        <img src= "assets/logo_quickbooks.png" id="quickbooks"/>
-        <img src= "assetslogo_mint.png" id="mint"/>
+        <%= image_tag "assets/logo_turbotax.png" id="turbotax"%>
+        <%= image_tag "assets/logo_quickbooks.png" id="quickbooks"%>
+        <%= image_tag "assetslogo_mint.png" id="mint"%>
       </div>
 
         <h2>One Account.<br/>Everything Intuit.</h2>
 
           <p> Create an account fot all of Intuit's products including Mint. 
-          <a href="https://accounts-help.lc.intuit.com/questions/1582580-creating-an-account">Learn more</a></p>
+          Learn more<%= link to"https://accounts-help.lc.intuit.com/questions/1582580-creating-an-account"%></p>
 
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
@@ -48,19 +48,19 @@
               </div>
           <% end %>
           <p>By clicking Create Account, you agree to our<br/>
-            <a href="https://www.mint.com/terms">License Agreement</a> and 
-            <a href="https://security.intuit.com/index.php/privacy">Privacy Statement.</a>
+            License Agreement<%= link to"https://www.mint.com/terms"%> 
+            Privacy Statement<%= link to"https://security.intuit.com/index.php/privacy"%>
           </p>
     </div>
   </article>
 
   <footer>
-   <img src= "assets/logo_intuit_grey.png" id="intuit_bottom"/>
+   <%= image_tag "assets/logo_intuit_grey.png" id="intuit_bottom"%>
     
     <div class= "mentions">
-      <a href="https://www.intuit.com/legal/">Legal</a>
-      <a href="https://security.intuit.com/index.php/privacy">Privacy</a>
-      <a href="https://security.intuit.com/">Security</a></br>
+      Legal<%= link to"https://www.intuit.com/legal/"%>
+      Privacy<%= link to"https://security.intuit.com/index.php/privacy"%>
+      Security<%= link to"https://security.intuit.com/"%></br>
       <p>© 2017 Intuit, Inc. Tous droits réservés. Intuit, QuickBooks, QB, TurboTax, ProConnect et Mint sont des marques déposées d'Intuit Inc.<br/>
       Les termes et conditions, caractéristiques, support, prix et options de service sont sujets à changement sans préavis.</p>
     </div>
